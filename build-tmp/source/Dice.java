@@ -16,7 +16,7 @@ public class Dice extends PApplet {
 
 public void setup()
 {
-	size(500, 500);
+	size(250, 250);
 	background(125);
 	noLoop();
 }
@@ -24,10 +24,14 @@ public void draw()
 {
 	//your code here
 	setup();
-	for (int i = 10; i <= 500; i+=55)
+	for (int j = 30; j <= 250; j+=75)
 	{
-		Die dice = new Die(i, 25);
-		dice.show();
+		for (int i = 30; i <= 350; i+=75)
+		{
+			Die dice = new Die(i, j);
+			dice.show();			
+		}
+		System.out.println();
 	}
 }
 public void mousePressed()
@@ -44,7 +48,7 @@ class Die //models one single dice cube
 		xPos = x;
 		yPos = y;
 		numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
-		// numDots = 4; // for checking if/else and positions.
+		// numDots = 6; // for checking if/else and positions.
 	}
 	public void roll()
 	{
@@ -61,7 +65,7 @@ class Die //models one single dice cube
 		/* */ 
 		if (numDots == 1)
 		{
-
+			ellipse(xPos+(25/2), yPos+(25/2), 5, 5);
 		}
 		else if (numDots == 2)
 		{
@@ -94,6 +98,9 @@ class Die //models one single dice cube
 			ellipse(xPos+(25/3), yPos+(25/4), 5, 5);
 			ellipse(xPos+(25/3), yPos+(2*(25/4)), 5, 5);
 			ellipse(xPos+(25/3), yPos+(3*(25/4)), 5, 5);
+			ellipse(xPos+(2*(25/3)), yPos+(25/4), 5, 5);
+			ellipse(xPos+(2*(25/3)), yPos+(2*(25/4)), 5, 5);
+			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), 5, 5);
 			// continue 2nd column of dots.
 		}
 		/* */
