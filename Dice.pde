@@ -1,6 +1,6 @@
 void setup()
 {
-	size(100, 100);
+	size(500, 500);
 	background(125);
 	noLoop();
 }
@@ -8,8 +8,11 @@ void draw()
 {
 	//your code here
 	setup();
-	Die dice1 = new Die(25, 25);
-	dice1.show();
+	for (int i = 10; i <= 500; i+=55)
+	{
+		Die dice = new Die(i, 25);
+		dice.show();
+	}
 }
 void mousePressed()
 {
@@ -24,8 +27,8 @@ class Die //models one single dice cube
 		//variable initializations here
 		xPos = x;
 		yPos = y;
-		// numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
-		numDots = 4; // for checking if/else and positions.
+		numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
+		// numDots = 4; // for checking if/else and positions.
 	}
 	void roll()
 	{
@@ -34,9 +37,10 @@ class Die //models one single dice cube
 	void show()
 	{
 		//your code here
-		fill(255);
-		rect(xPos, yPos, 25, 25, 2.5);
 			noStroke();
+			fill(255);
+		rect(xPos, yPos, 25, 25, 2.5);
+
 			fill(0);
 		/* */ 
 		if (numDots == 1)
