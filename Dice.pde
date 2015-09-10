@@ -16,7 +16,7 @@ void draw()
 			dice.roll();
 			dice.show();			
 		}
-		System.out.println();
+		// System.out.println();
 	}
 }
 void mousePressed()
