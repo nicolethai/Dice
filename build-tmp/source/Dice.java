@@ -19,7 +19,7 @@ int numMouseClicked = 0;
 public void setup()
 {
 	size(250, 250);
-	background(212, 212, 202);
+	background(200, 200, 200);
 	noLoop();
 }
 public void draw()
