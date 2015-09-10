@@ -13,6 +13,7 @@ void draw()
 		for (int i = 30; i <= 350; i+=75)
 		{
 			Die dice = new Die(i, j);
+			dice.roll();
 			dice.show();			
 		}
 		System.out.println();
@@ -31,12 +32,13 @@ class Die //models one single dice cube
 		//variable initializations here
 		xPos = x;
 		yPos = y;
-		numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
+		// numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
 		// numDots = 6; // for checking if/else and positions.
 	}
 	void roll()
 	{
-		//your code here
+		//your code here		
+		numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
 	}
 	void show()
 	{
