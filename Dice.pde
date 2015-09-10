@@ -85,7 +85,6 @@ class Die //models one single dice cube
 			ellipse(xPos+(2*(25/3)), yPos+(25/4), 5, 5);
 			ellipse(xPos+(2*(25/3)), yPos+(2*(25/4)), 5, 5);
 			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), 5, 5);
-			// continue 2nd column of dots.
 		}
 		/* */
 	}
