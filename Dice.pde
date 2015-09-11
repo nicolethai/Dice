@@ -1,3 +1,23 @@
+/********************************************************
+
+TO DO:
+
+- Use arrays to:
+	1. Create Dice (instances)
+	2. Store Dice randDot value
+	3. Use randDot value to create sum of die
+
+	- Sum of Die:
+		~ create new member function within Die class
+		~ create a counter
+		~ for each die, add numDots to counter
+		~ display the counter value
+		~ reset counter to zero at mousePressed()
+		
+
+********************************************************/
+
+
 int numMouseClicked = 0;
 
 void setup()
