@@ -65,16 +65,28 @@ class Die //models one single dice cube
 		//your code here
 			noStroke();
 			fill(75);
-			/********
+			/*****************************
+			-- rand die fill to be w/g/b --
+
 			(int)(Math.random()*255)
 			for w,g,b: 
 			w > 125
 			g = 125
 			b < 125
-			********/
+
+			use:
+			num = (int)(Math.random()*2)
+			if (num == 0)
+				fill = b
+			else if (num == 1)
+				fill = g
+			else if (num ==2)
+				fill = w;
+			
+			****************************/
 		rect(xPos, yPos, 25, 25, 2.5f);
 
-			fill(255, 102, 0); // 255, 255, 0
+			fill(255, 102, 0); // orange // 255, 255, 0
 		/* */ 
 		int dotSize = 4;
 		if (numDots == 1)
@@ -116,8 +128,12 @@ class Die //models one single dice cube
 			ellipse(xPos+(2*(25/3)), yPos+(2*(25/4)), dotSize, dotSize);
 			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), dotSize, dotSize);
 		}
-		/* */
+		/* maybe shorten? */
 
+		// test text 
+		stroke(1);
+		fill(0);
+		text("Number of Rolls: " + numMouseClicked, 10, 240);
 	}
 }
   static public void main(String[] passedArgs) {

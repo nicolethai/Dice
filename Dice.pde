@@ -112,7 +112,11 @@ class Die //models one single dice cube
 			ellipse(xPos+(2*(25/3)), yPos+(2*(25/4)), dotSize, dotSize);
 			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), dotSize, dotSize);
 		}
-		/* */
+		/* maybe shorten? */
 
+		// test text 
+		stroke(1);
+		fill(0);
+		text("Number of Rolls: " + numMouseClicked, 10, 240);
 	}
 }
