@@ -14,6 +14,7 @@ TO DO:
 		~ display the counter value
 		~ reset counter to zero at mousePressed()
 		
+~~ CLEAN UP CODE ~~
 
 ********************************************************/
 
