@@ -14,11 +14,32 @@ import java.io.IOException;
 
 public class Dice extends PApplet {
 
+/********************************************************
+
+TO DO:
+
+- Use arrays to:
+	1. Create Dice (instances)
+	2. Store Dice randDot value
+	3. Use randDot value to create sum of die
+
+	- Sum of Die:
+		~ create new member function within Die class
+		~ create a counter
+		~ for each die, add numDots to counter
+		~ display the counter value
+		~ reset counter to zero at mousePressed()
+		
+~~ CLEAN UP CODE ~~
+
+********************************************************/
+
+
 int numMouseClicked = 0;
 
 public void setup()
 {
-	size(250, 250);
+	size(250, 300);
 	background(200, 200, 200);
 	noLoop();
 }
@@ -133,7 +154,7 @@ class Die //models one single dice cube
 		// test text 
 		stroke(1);
 		fill(0);
-		text("Number of Rolls: " + numMouseClicked, 10, 240);
+		text("Number of Rolls: " + numMouseClicked, 10, 275);
 	}
 }
   static public void main(String[] passedArgs) {

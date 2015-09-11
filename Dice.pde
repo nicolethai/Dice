@@ -23,7 +23,7 @@ int numMouseClicked = 0;
 
 void setup()
 {
-	size(250, 250);
+	size(250, 300);
 	background(200, 200, 200);
 	noLoop();
 }
@@ -138,6 +138,6 @@ class Die //models one single dice cube
 		// test text 
 		stroke(1);
 		fill(0);
-		text("Number of Rolls: " + numMouseClicked, 10, 240);
+		text("Number of Rolls: " + numMouseClicked, 10, 275);
 	}
 }
