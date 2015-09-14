@@ -2,24 +2,13 @@
 
 TO DO:
 
-- Use arrays to:
-	1. Create Dice (instances)
-	2. Store Dice randDot value
-	3. Use randDot value to create sum of die
-
-	- Sum of Die:
-		~ create new member function within Die class
-		~ create a counter
-		~ for each die, add numDots to counter
-		~ display the counter value
-		~ reset counter to zero at mousePressed()
-		
 ~~ CLEAN UP CODE ~~
 
 ********************************************************/
 
-
+// init counter for totals
 int numMouseClicked = 0;
+int sumNumDots = 0; 
 
 void setup()
 {
@@ -29,24 +18,31 @@ void setup()
 }
 void draw()
 {
-	//your code here
 	setup();
+	sumNumDots = 0;
 	for (int j = 35; j <= 250; j+=75)
 	{
 		for (int i = 35; i <= 250; i+=75)
 		{
 			Die dice = new Die(i, j);
 			dice.roll();
-			dice.show();			
+			dice.show();
+			sumNumDots += dice.numDots;
 		}
 	}
-
+    // text output 
+    stroke(1);
+    fill(0);
+    text("Sum of Die: " + sumNumDots, 10, 260);
+    text("Number of Rolls: " + numMouseClicked, 10, 280);
 }
+
 void mousePressed()
 {
-	numMouseClicked++; // include later
+	numMouseClicked++; 
 	redraw();
 }
+
 class Die //models one single dice cube
 {
 	//variable declarations here
@@ -56,19 +52,29 @@ class Die //models one single dice cube
 		//variable initializations here
 		xPos = x;
 		yPos = y;
-		// numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
-		// numDots = 6; // for checking if/else and positions.
 	}
 	void roll()
 	{
-		//your code here	
-		// numDots = 1; // for checking if/else and positions.	
 		numDots = (int)((Math.random() * 6) + 1); // generates the random dots for die
 	}
 	void show()
 	{
-		//your code here
 			noStroke();
+		    int wgbFill;
+		    /*
+		    if ((int)(Math.random()*3) == 0)
+		    {
+		    	wgbFill = black;
+		    }
+		    else if ((int)(Math.random()*3) == 0)
+		    {
+		    	wgbFill = grey;
+		    }
+		    else ((int)(Math.random()*3) == 0)
+		    {
+		    	wgbFill = white;
+		    }
+			*/
 			fill(75);
 			/*****************************
 			-- rand die fill to be w/g/b --
@@ -134,10 +140,5 @@ class Die //models one single dice cube
 			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), dotSize, dotSize);
 		}
 		/* maybe shorten? */
-
-		// test text 
-		stroke(1);
-		fill(0);
-		text("Number of Rolls: " + numMouseClicked, 10, 275);
 	}
 }
