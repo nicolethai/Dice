@@ -32,6 +32,7 @@ public void setup()
 	background(200, 200, 200);
 	noLoop();
 }
+
 public void draw()
 {
 	setup();
@@ -75,45 +76,27 @@ class Die //models one single dice cube
 	}
 	public void show()
 	{
-			noStroke();
-		    int wgbFill;
-		    /*
-		    if ((int)(Math.random()*3) == 0)
-		    {
-		    	wgbFill = black;
-		    }
-		    else if ((int)(Math.random()*3) == 0)
-		    {
-		    	wgbFill = grey;
-		    }
-		    else ((int)(Math.random()*3) == 0)
-		    {
-		    	wgbFill = white;
-		    }
-			*/
-			fill(75);
-			/*****************************
-			-- rand die fill to be w/g/b --
-
-			(int)(Math.random()*255)
-			for w,g,b: 
-			w > 125
-			g = 125
-			b < 125
-
-			use:
-			num = (int)(Math.random()*2)
-			if (num == 0)
-				fill = b
-			else if (num == 1)
-				fill = g
-			else if (num ==2)
-				fill = w;
-			
-			****************************/
+		noStroke();
+		int randFill = (int)(Math.random()*3);
+		int wgbFill = 0;
+		    
+	    if (randFill == 0)
+	    {
+	       	wgbFill = 0;
+	    }
+	    else if (randFill == 1)
+	    {
+	      	wgbFill = 125;
+	    }
+	    else if (randFill == 2)
+	    {
+	       	wgbFill = 255;
+	    }
+	    			
+		fill(wgbFill);
 		rect(xPos, yPos, 25, 25, 2.5f);
 
-			fill(255, 102, 0); // orange // 255, 255, 0
+		fill(255, 102, 0); // orange // 255, 255, 0
 		/* */ 
 		int dotSize = 4;
 		if (numDots == 1)
