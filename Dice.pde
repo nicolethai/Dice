@@ -1,11 +1,3 @@
-/********************************************************
-
-TO DO:
-
-~~ CLEAN UP CODE ~~
-
-********************************************************/
-
 // init counter for totals
 int numMouseClicked = 0;
 int sumNumDots = 0; 
@@ -76,12 +68,12 @@ class Die //models one single dice cube
 	    {
 	       	wgbFill = 255;
 	    }
-	    			
+	    // dice			
 		fill(wgbFill);
 		rect(xPos, yPos, 25, 25, 2.5);
 
-		fill(255, 102, 0); // orange // 255, 255, 0
-		/* */ 
+		// dots
+		fill(255, 102, 0); 
 		int dotSize = 4;
 		if (numDots == 1)
 		{
@@ -122,6 +114,5 @@ class Die //models one single dice cube
 			ellipse(xPos+(2*(25/3)), yPos+(2*(25/4)), dotSize, dotSize);
 			ellipse(xPos+(2*(25/3)), yPos+(3*(25/4)), dotSize, dotSize);
 		}
-		/* maybe shorten? */
 	}
 }
